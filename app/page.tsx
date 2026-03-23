@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CountdownSection } from "./components/CountdownSection";
+import { TriangleInvitationOverlay } from "./components/TriangleInvitationOverlay";
 
 export default function Home() {
   return (
     <div className="relative flex w-full flex-1 flex-col">
+      <TriangleInvitationOverlay />
       <section className="relative flex min-h-[85vh] items-center justify-center px-6 py-20 sm:min-h-[95vh]">
         <div className="absolute inset-0 -z-10">
           <Image
