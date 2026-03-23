@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { useEffect, useMemo, useState } from "react";
 
 export type TriangleInvitationOverlayProps = {
@@ -21,16 +22,50 @@ export function TriangleInvitationOverlay({
     [transitionMs],
   );
 
-  const flapStyle = useMemo(
-    () =>
-      ({
-        top: { clipPath: "polygon(0 0, 100% 0, 50% 50%)" },
-        bottom: { clipPath: "polygon(0 100%, 100% 100%, 50% 50%)" },
-        left: { clipPath: "polygon(0 0, 0 100%, 50% 50%)" },
-        right: { clipPath: "polygon(100% 0, 100% 100%, 50% 50%)" },
-      }) as const,
-    [],
-  );
+  const flapStyle = useMemo(() => {
+    const rolexGreen = "#006039";
+    const softWhite = "rgba(255,255,255,0.92)";
+    const base: Pick<CSSProperties, "clipPath" | "backgroundImage"> = {
+      clipPath: "",
+      backgroundImage: "",
+    };
+
+    return {
+      top: {
+        ...base,
+        clipPath: "polygon(0 0, 100% 0, 50% 50%)",
+        backgroundImage: `linear-gradient(to bottom, ${softWhite} 0%, ${rolexGreen} 70%)`,
+      },
+      bottom: {
+        ...base,
+        clipPath: "polygon(0 100%, 100% 100%, 50% 50%)",
+        backgroundImage: `linear-gradient(to top, ${softWhite} 0%, ${rolexGreen} 70%)`,
+      },
+      left: {
+        ...base,
+        clipPath: "polygon(0 0, 0 100%, 50% 50%)",
+        backgroundImage: `linear-gradient(to right, ${softWhite} 0%, ${rolexGreen} 70%)`,
+      },
+      right: {
+        ...base,
+        clipPath: "polygon(100% 0, 100% 100%, 50% 50%)",
+        backgroundImage: `linear-gradient(to left, ${softWhite} 0%, ${rolexGreen} 70%)`,
+      },
+    } as const;
+  }, []);
+
+  useEffect(() => {
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
+    };
+  }, []);
 
   useEffect(() => {
     if (!isClosing) return;
@@ -47,7 +82,7 @@ export function TriangleInvitationOverlay({
   return (
     <div
       className={[
-        "fixed inset-0 z-50 flex min-h-screen items-center justify-center overflow-hidden",
+        "fixed inset-0 z-50 flex h-[100svh] w-screen items-center justify-center overflow-hidden overscroll-none",
         "transition-[opacity,transform] ease-out",
         isClosing ? "opacity-0 scale-[1.02]" : "opacity-100 scale-100",
       ].join(" ")}
@@ -67,32 +102,32 @@ export function TriangleInvitationOverlay({
 
       <div className="pointer-events-none absolute inset-0 [isolation:isolate]">
         <div
-          className="absolute inset-0 bg-emerald-600/80"
+          className="absolute inset-0 opacity-90"
           style={flapStyle.top}
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 bg-emerald-600/70"
+          className="absolute inset-0 opacity-85"
           style={flapStyle.left}
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 bg-emerald-600/70"
+          className="absolute inset-0 opacity-85"
           style={flapStyle.right}
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 bg-emerald-600/85"
+          className="absolute inset-0 opacity-90"
           style={flapStyle.bottom}
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 bg-black/15 mix-blend-multiply"
+          className="absolute inset-0 bg-black/10 mix-blend-multiply"
           aria-hidden="true"
         />
       </div>
 
-      <div className="relative mx-auto w-full max-w-xl px-6 text-center text-white">
+      <div className="relative z-10 flex h-[100svh] w-full items-center justify-center px-6 text-center text-white">
         <button
           type="button"
           onClick={() => setIsClosing(true)}
