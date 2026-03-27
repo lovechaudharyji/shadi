@@ -36,21 +36,39 @@ export function CountdownSection() {
     return weddingDate.getTime();
   }, []);
 
-  const [countdown, setCountdown] = useState<Countdown>(() =>
-    getCountdown(targetTimeMs),
-  );
+  const [countdown, setCountdown] = useState<Countdown>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
+    const rafId = window.requestAnimationFrame(() => {
+      setCountdown(getCountdown(targetTimeMs));
+    });
     const id = window.setInterval(() => {
       setCountdown(getCountdown(targetTimeMs));
     }, 1000);
 
-    return () => window.clearInterval(id);
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      window.clearInterval(id);
+    };
   }, [targetTimeMs]);
 
   return (
-    <section className="bg-emerald-800 text-white">
-      <div className="mx-auto w-full max-w-5xl px-6 py-14 text-center">
+    <section
+      className="relative text-white"
+      style={{
+        backgroundImage: `url("/image/card.png")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute inset-0 bg-emerald-900/70" aria-hidden="true" />
+      <div className="relative mx-auto w-full max-w-5xl px-6 py-14 text-center">
         <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
           Cowndown
         </div>
@@ -58,7 +76,7 @@ export function CountdownSection() {
           To the most special day of our lives
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-4">
           <div className="rounded-2xl border border-white/20 bg-white/10 p-5">
             <div className="text-4xl font-semibold tabular-nums">
               {countdown.days}

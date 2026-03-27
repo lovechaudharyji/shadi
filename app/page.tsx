@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { CountdownSection } from "./components/CountdownSection";
 import { TriangleInvitationOverlay } from "./components/TriangleInvitationOverlay";
@@ -6,8 +5,8 @@ import { TriangleInvitationOverlay } from "./components/TriangleInvitationOverla
 export default function Home() {
   return (
     <div className="relative flex w-full flex-1 flex-col">
-      <TriangleInvitationOverlay />
-      <section className="relative flex min-h-[85vh] items-center justify-center px-6 py-20 sm:min-h-[95vh]">
+      <TriangleInvitationOverlay navigateTo="/about" />
+      <section className="relative flex h-[100svh] items-center justify-center px-6 py-0 sm:min-h-[95vh] sm:py-20">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/image/1.jpeg"
@@ -15,24 +14,40 @@ export default function Home() {
             aria-hidden="true"
             fill
             priority
+            sizes="100vw"
             className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-zinc-50" />
         </div>
-        <div className="w-full max-w-3xl">
+        <div className="pointer-events-none absolute left-1/2 top-4 z-10 flex -translate-x-1/2 flex-col items-center">
+          <div className="text-sm font-semibold tracking-wide text-white/90 drop-shadow sm:text-base">
+            ।। श्री गणेशाय नमः।।
+          </div>
+          <div className="relative mt-2 h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44">
+            <Image
+              src="/image/Ganesh.png"
+              alt="Ganesh"
+              fill
+              priority
+              sizes="(min-width: 768px) 11rem, (min-width: 640px) 9rem, 7rem"
+              className="object-contain drop-shadow-[0_10px_22px_rgba(0,0,0,0.35)]"
+            />
+          </div>
+        </div>
+        <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2">
           <div className="flex flex-col items-center gap-6 text-center text-white">
             <div className="flex flex-col items-center gap-3">
-              <div className="text-4xl tracking-[0.22em] sm:text-2xl">
+              <div className="-mt-2 text-xs font-semibold tracking-[0.32em] text-white/85 sm:-mt-3 sm:text-sm">
                 NOS CASAMOS
               </div>
-              <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
+              <div className="mt-2 [font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
                 Tarun
               </div>
-              <div className="text-4xl leading-none text-amber-500 sm:text-5xl">
+              <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-amber-500 sm:text-6xl">
                 &
               </div>
-              <div className="[font-family:var(--font-great-vibes)] text-7xl leading-none sm:text-6xl">
+              <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
                 Bhawna
               </div>
               <div className="mt-2 flex w-full max-w-sm items-center justify-center gap-4">
@@ -50,9 +65,11 @@ export default function Home() {
             <div className="[font-family:var(--font-great-vibes)] text-4xl leading-none text-white/90 drop-shadow sm:text-3xl">
               Date - 25/04/26
             </div>
-            <div className="text-xs font-semibold tracking-[0.32em] text-white/85 sm:text-sm">
-              CONFIRM YOUR ATTENDANCE
-            </div>
+          </div>
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-8 px-6 text-center sm:bottom-10">
+          <div className="text-xs font-semibold tracking-[0.32em] text-white/85 sm:text-sm">
+            CONFIRM YOUR ATTENDANCE
           </div>
         </div>
       </section>
@@ -84,7 +101,10 @@ export default function Home() {
                 </svg>
               </div>
               <div className="mt-4 text-3xl tracking-[0.22em] sm:text-2xl">
-                CEREMONY
+                LAGAN CEREMONY
+              </div>
+              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-zinc-600">
+                TIMING - 5:00PM
               </div>
 
               <div className="mt-5 space-y-3 text-lg leading-6 text-zinc-700">
@@ -176,6 +196,9 @@ export default function Home() {
               <div className="mt-4 text-3xl tracking-[0.22em] sm:text-2xl">
                 WEDDING CEREMONY
               </div>
+              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-zinc-600">
+                TIMING - 7:30PM
+              </div>
 
               <div className="mt-5 space-y-3 text-lg leading-6 text-zinc-700">
                 <div className="inline-flex items-center justify-center gap-2">
@@ -251,64 +274,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="relative mx-auto w-full max-w-5xl px-6 pb-16">
-        <section className="grid gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-            <div className="text-sm font-medium text-zinc-900">
-              Clear structure
-            </div>
-            <div className="mt-2 text-sm leading-6 text-zinc-600">
-              A simple layout with consistent spacing, typography, and
-              navigation.
-            </div>
-          </div>
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-            <div className="text-sm font-medium text-zinc-900">
-              Fast navigation
-            </div>
-            <div className="mt-2 text-sm leading-6 text-zinc-600">
-              Dedicated pages for About and Contact, with smooth internal
-              routing.
-            </div>
-          </div>
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-            <div className="text-sm font-medium text-zinc-900">
-              Professional look
-            </div>
-            <div className="mt-2 text-sm leading-6 text-zinc-600">
-              Soft backgrounds, subtle borders, and a polished card-based hero.
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-10 rounded-3xl border border-zinc-200 bg-white p-8 sm:p-10">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight">
-                Where do you want to go next?
-              </h2>
-              <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-600">
-                Use these quick links or the top navigation to explore the
-                website.
-              </p>
-            </div>
-            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-              <Link
-                className="flex h-12 w-full items-center justify-center rounded-full bg-amber-500 px-6 text-white transition-colors hover:bg-amber-400 sm:w-auto"
-                href="/about"
-              >
-                About
-              </Link>
-              <Link
-                className="flex h-12 w-full items-center justify-center rounded-full border border-zinc-200 bg-white px-6 transition-colors hover:bg-zinc-50 sm:w-auto"
-                href="/contact"
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
+      {/* Removed starter cards/CTA section */}
     </div>
   );
 }

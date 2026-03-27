@@ -37,8 +37,11 @@ export default function RootLayout({
         <main className="flex flex-1 flex-col">{children}</main>
 
         <footer className="border-t border-zinc-200 bg-white">
-          <div className="mx-auto w-full max-w-5xl px-6 py-6 text-sm text-zinc-600">
-            © {new Date().getFullYear()} Shadi
+          <div className="mx-auto w-full max-w-5xl px-6 py-6 text-center text-sm text-zinc-600">
+            <div className="[font-family:var(--font-great-vibes)] mb-1 text-2xl text-zinc-800">
+              Come with your family
+            </div>
+            <div>© {new Date().getFullYear()} Shadi</div>
           </div>
         </footer>
       </body>
