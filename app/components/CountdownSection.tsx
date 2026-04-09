@@ -71,7 +71,7 @@ export function CountdownSection() {
         />
       </div>
       <div className="relative mx-auto w-full max-w-5xl px-6 py-14 text-center">
-        <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
+        <div className="[font-family:var(--font-parisienne)] text-5xl leading-none sm:text-6xl">
           Cowndown
         </div>
         <div className="mt-3 text-sm tracking-wide text-white/85 sm:text-base">

@@ -39,13 +39,13 @@ export default function Home() {
               <div className="-mt-2 text-xs font-semibold tracking-[0.32em] text-white/85 sm:-mt-3 sm:text-sm">
                 NOS CASAMOS
               </div>
-              <div className="mt-2 [font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
+              <div className="mt-2 [font-family:var(--font-parisienne)] text-5xl leading-none sm:text-6xl">
                 Tarun
               </div>
               <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-amber-500 sm:text-6xl">
                 &
               </div>
-              <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
+              <div className="[font-family:var(--font-parisienne)] text-5xl leading-none sm:text-6xl">
                 Bhawna
               </div>
               <div className="mt-2 flex w-full max-w-sm items-center justify-center gap-4">
