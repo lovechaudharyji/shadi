@@ -269,15 +269,28 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="relative h-44 w-full sm:h-64">
-        <Image
-          src="/image/last.png"
-          alt=""
-          aria-hidden="true"
-          fill
-          sizes="100vw"
-          className="object-cover object-bottom"
-        />
+
+      <section className="relative h-[100svh] w-full overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/image/last.png"
+            alt=""
+            aria-hidden="true"
+            fill
+            sizes="100vw"
+            className="object-cover object-center blur-2xl"
+          />
+        </div>
+        <div className="absolute inset-0">
+          <Image
+            src="/image/last.png"
+            alt=""
+            aria-hidden="true"
+            fill
+            sizes="100vw"
+            className="object-contain object-center"
+          />
+        </div>
       </section>
     </div>
   );
