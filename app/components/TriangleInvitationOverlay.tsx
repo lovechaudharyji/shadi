@@ -208,7 +208,7 @@ export function TriangleInvitationOverlay({
         />
       </div>
 
-      <div className="relative z-10 flex h-[100svh] w-full items-center justify-center px-0 text-center text-white">
+      <div className="relative z-10 flex h-[100svh] w-full items-center justify-center px-0 text-center text-[#800000]">
         <div className="relative flex w-full flex-col items-center">
           <button
             type="button"
@@ -236,7 +236,7 @@ export function TriangleInvitationOverlay({
           </button>
           <div
             className={[
-              "pointer-events-none mt-6 flex items-center justify-center gap-3 text-white/95 drop-shadow",
+              "pointer-events-none mt-6 flex items-center justify-center gap-3 text-[#800000] drop-shadow",
               isClosing ? "opacity-0" : "opacity-100",
             ].join(" ")}
             style={flapTransition.button}

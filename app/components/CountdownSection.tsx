@@ -59,7 +59,7 @@ export function CountdownSection() {
   }, [targetTimeMs]);
 
   return (
-    <section className="relative w-full overflow-hidden text-white">
+    <section className="relative w-full overflow-hidden text-[#800000]">
       <div className="absolute inset-0">
         <Image
           src="/image/2d.png"
@@ -74,7 +74,7 @@ export function CountdownSection() {
         <div className="[font-family:var(--font-parisienne)] text-5xl leading-none sm:text-6xl">
           Cowndown
         </div>
-        <div className="mt-3 text-sm tracking-wide text-white/85 sm:text-base">
+        <div className="mt-3 text-sm tracking-wide text-[#800000] sm:text-base">
           To the most special day of our lives
         </div>
 
@@ -83,7 +83,7 @@ export function CountdownSection() {
             <div className="text-4xl font-semibold tabular-nums">
               {countdown.days}
             </div>
-            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-white/80">
+            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
               DAY
             </div>
           </div>
@@ -91,7 +91,7 @@ export function CountdownSection() {
             <div className="text-4xl font-semibold tabular-nums">
               {pad2(countdown.hours)}
             </div>
-            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-white/80">
+            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
               HOURS
             </div>
           </div>
@@ -99,7 +99,7 @@ export function CountdownSection() {
             <div className="text-4xl font-semibold tabular-nums">
               {pad2(countdown.minutes)}
             </div>
-            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-white/80">
+            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
               MINIUTES
             </div>
           </div>
@@ -107,7 +107,7 @@ export function CountdownSection() {
             <div className="text-4xl font-semibold tabular-nums">
               {pad2(countdown.seconds)}
             </div>
-            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-white/80">
+            <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
               SECONDS
             </div>
           </div>

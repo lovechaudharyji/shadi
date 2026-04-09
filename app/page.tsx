@@ -19,7 +19,7 @@ export default function Home() {
           />
         </div>
         <div className="pointer-events-none absolute left-1/2 top-4 z-10 flex -translate-x-1/2 flex-col items-center">
-          <div className="text-sm font-semibold tracking-wide text-white/90 drop-shadow sm:text-base">
+          <div className="text-sm font-semibold tracking-wide text-[#800000] drop-shadow sm:text-base">
             ।। श्री गणेशाय नमः।।
           </div>
           <div className="relative mt-2 h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44">
@@ -34,15 +34,15 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2">
-          <div className="flex flex-col items-center gap-6 text-center text-white">
+          <div className="flex flex-col items-center gap-6 text-center text-[#800000]">
             <div className="flex flex-col items-center gap-3">
-              <div className="-mt-2 text-xs font-semibold tracking-[0.32em] text-white/85 sm:-mt-3 sm:text-sm">
+              <div className="-mt-2 text-xs font-semibold tracking-[0.32em] text-[#800000] sm:-mt-3 sm:text-sm">
                 NOS CASAMOS
               </div>
               <div className="mt-2 [font-family:var(--font-parisienne)] text-5xl leading-none sm:text-6xl">
                 Tarun
               </div>
-              <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-amber-500 sm:text-6xl">
+              <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
                 &
               </div>
               <div className="[font-family:var(--font-parisienne)] text-5xl leading-none sm:text-6xl">
@@ -51,7 +51,7 @@ export default function Home() {
               <div className="mt-2 flex w-full max-w-sm items-center justify-center gap-4">
                 <div className="h-px flex-1 bg-white/60" />
                 <span
-                  className="text-sm leading-none text-amber-500 drop-shadow"
+                  className="text-sm leading-none text-[#800000] drop-shadow"
                   aria-hidden="true"
                 >
                   ★
@@ -60,13 +60,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="[font-family:var(--font-great-vibes)] text-4xl leading-none text-white/90 drop-shadow sm:text-3xl">
+            <div className="[font-family:var(--font-great-vibes)] text-4xl leading-none text-[#800000] drop-shadow sm:text-3xl">
               Date - 25/04/26
             </div>
           </div>
         </div>
         <div className="pointer-events-none absolute inset-x-0 bottom-8 px-6 text-center sm:bottom-10">
-          <div className="text-xs font-semibold tracking-[0.32em] text-white/85 sm:text-sm">
+          <div className="text-xs font-semibold tracking-[0.32em] text-[#800000] sm:text-sm">
             CONFIRM YOUR ATTENDANCE
           </div>
         </div>
@@ -76,16 +76,16 @@ export default function Home() {
 
       <section className="bg-amber-50">
         <div className="mx-auto w-full max-w-5xl px-6 py-14 text-center">
-          <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-zinc-900 sm:text-6xl">
+          <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
             Where WE Celebrate
           </div>
-          <div className="mt-4 text-sm font-semibold tracking-[0.28em] text-zinc-700 sm:text-base">
+          <div className="mt-4 text-sm font-semibold tracking-[0.28em] text-[#800000] sm:text-base">
             LOCATION
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-3xl border border-zinc-200 bg-white p-7 text-center text-zinc-900 shadow-sm">
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+            <div className="rounded-3xl border border-zinc-200 bg-white p-7 text-center text-[#800000] shadow-sm">
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-[#800000]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -101,11 +101,11 @@ export default function Home() {
               <div className="mt-4 text-3xl tracking-[0.22em] sm:text-2xl">
                 LAGAN CEREMONY
               </div>
-              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-zinc-600">
+              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
                 TIMING - 5:00PM
               </div>
 
-              <div className="mt-5 space-y-3 text-lg leading-6 text-zinc-700">
+              <div className="mt-5 space-y-3 text-lg leading-6 text-[#800000]">
                 <div className="inline-flex items-center justify-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,12 +113,12 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="h-4 w-4 text-amber-600"
+                    className="h-4 w-4 text-[#800000]"
                     aria-hidden="true"
                   >
                     <path d="M8 7V3M16 7V3M4 11h16M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z" />
                   </svg>
-                  <span className="text-2xl leading-none text-zinc-900">23/04/26</span>
+                  <span className="text-2xl leading-none text-[#800000]">23/04/26</span>
                 </div>
                 <div className="mx-auto max-w-md">
                   <div className="inline-flex items-start justify-center gap-2">
@@ -128,7 +128,7 @@ export default function Home() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      className="mt-0.5 h-4 w-4 shrink-0 text-amber-600"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-[#800000]"
                       aria-hidden="true"
                     >
                       <path d="M12 22s7-4.5 7-12a7 7 0 1 0-14 0c0 7.5 7 12 7 12Z" />
@@ -142,7 +142,7 @@ export default function Home() {
                 </div>
                 <div>
                   <a
-                    className="inline-flex items-center justify-center gap-2 text-xl text-amber-600 underline underline-offset-4 hover:text-amber-500"
+                    className="inline-flex items-center justify-center gap-2 text-xl text-[#800000] underline underline-offset-4"
                     href="https://www.google.com/maps/place/Rama+Palace,+Sector-61,+Haryana+Road,+Baharampur+Naya,+Sector+61,+Gurugram,+Ghata,+Haryana+122098/@28.4169184,77.0968647,15z/data=!4m6!3m5!1s0x390d23a71a97848d:0x1bc269500ec2eb2f!8m2!3d28.4169184!4d77.0968647!16s%2Fg%2F11fhryq9qk?g_ep=Eg1tbF8yMDI2MDMxMV8wIOC7DCoASAJQAg%3D%3D"
                     target="_blank"
                     rel="noreferrer"
@@ -176,8 +176,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-zinc-200 bg-white p-7 text-center text-zinc-900 shadow-sm">
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+            <div className="rounded-3xl border border-zinc-200 bg-white p-7 text-center text-[#800000] shadow-sm">
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-[#800000]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -194,11 +194,11 @@ export default function Home() {
               <div className="mt-4 text-3xl tracking-[0.22em] sm:text-2xl">
                 WEDDING CEREMONY
               </div>
-              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-zinc-600">
+              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
                 TIMING - 7:30PM
               </div>
 
-              <div className="mt-5 space-y-3 text-lg leading-6 text-zinc-700">
+              <div className="mt-5 space-y-3 text-lg leading-6 text-[#800000]">
                 <div className="inline-flex items-center justify-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -206,12 +206,12 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="h-4 w-4 text-amber-600"
+                    className="h-4 w-4 text-[#800000]"
                     aria-hidden="true"
                   >
                     <path d="M8 7V3M16 7V3M4 11h16M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z" />
                   </svg>
-                  <span className="text-2xl leading-none text-zinc-900">25/04/26</span>
+                  <span className="text-2xl leading-none text-[#800000]">25/04/26</span>
                 </div>
                 <div className="mx-auto max-w-md">
                   <div className="inline-flex items-start justify-center gap-2">
@@ -221,7 +221,7 @@ export default function Home() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      className="mt-0.5 h-4 w-4 shrink-0 text-amber-600"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-[#800000]"
                       aria-hidden="true"
                     >
                       <path d="M12 22s7-4.5 7-12a7 7 0 1 0-14 0c0 7.5 7 12 7 12Z" />
@@ -235,7 +235,7 @@ export default function Home() {
                 </div>
                 <div>
                   <a
-                    className="inline-flex items-center justify-center gap-2 text-xl text-amber-600 underline underline-offset-4 hover:text-amber-500"
+                    className="inline-flex items-center justify-center gap-2 text-xl text-[#800000] underline underline-offset-4"
                     href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x390d17a368ba5a3d:0xbb2e3fcee17f3539?entry=s&sa=X&ved=2ahUKEwi788HGo6yTAxXISmwGHU-uChYQ4kB6BAgVEAA&hl=en"
                     target="_blank"
                     rel="noreferrer"
