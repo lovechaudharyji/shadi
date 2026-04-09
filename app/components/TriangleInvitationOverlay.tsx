@@ -12,7 +12,7 @@ export type TriangleInvitationOverlayProps = {
 };
 
 export function TriangleInvitationOverlay({
-  backgroundSrc = "/image/1.jpeg",
+  backgroundSrc = "/image/hero.png",
   backgroundAlt = "Wedding invitation cover background",
   navigateTo,
 }: TriangleInvitationOverlayProps) {
@@ -163,13 +163,12 @@ export function TriangleInvitationOverlay({
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="pointer-events-none absolute inset-0 [isolation:isolate] [perspective:1200px]">
         <div
           className={[
-            "absolute inset-0 opacity-90 will-change-transform origin-top transform-gpu",
+            "absolute inset-0 opacity-100 will-change-transform origin-top transform-gpu",
             isClosing
               ? "[transform:translateY(-12%)_rotateX(78deg)] opacity-0"
               : "[transform:translateY(0)_rotateX(0deg)]",
@@ -179,7 +178,7 @@ export function TriangleInvitationOverlay({
         />
         <div
           className={[
-            "absolute inset-0 opacity-85 will-change-transform origin-left transform-gpu",
+            "absolute inset-0 opacity-100 will-change-transform origin-left transform-gpu",
             isClosing
               ? "[transform:translateX(-12%)_rotateY(78deg)] opacity-0"
               : "[transform:translateX(0)_rotateY(0deg)]",
@@ -189,7 +188,7 @@ export function TriangleInvitationOverlay({
         />
         <div
           className={[
-            "absolute inset-0 opacity-85 will-change-transform origin-right transform-gpu",
+            "absolute inset-0 opacity-100 will-change-transform origin-right transform-gpu",
             isClosing
               ? "[transform:translateX(12%)_rotateY(-78deg)] opacity-0"
               : "[transform:translateX(0)_rotateY(0deg)]",
@@ -199,7 +198,7 @@ export function TriangleInvitationOverlay({
         />
         <div
           className={[
-            "absolute inset-0 opacity-90 will-change-transform origin-bottom transform-gpu",
+            "absolute inset-0 opacity-100 will-change-transform origin-bottom transform-gpu",
             isClosing
               ? "[transform:translateY(12%)_rotateX(-78deg)] opacity-0"
               : "[transform:translateY(0)_rotateX(0deg)]",
@@ -207,22 +206,10 @@ export function TriangleInvitationOverlay({
           style={{ ...flapStyle.bottom, ...flapTransition.bottom }}
           aria-hidden="true"
         />
-        <div
-          className={[
-            "absolute inset-0 bg-black/10 mix-blend-multiply",
-            isClosing ? "opacity-0" : "opacity-100",
-          ].join(" ")}
-          style={flapTransition.shade}
-          aria-hidden="true"
-        />
       </div>
 
       <div className="relative z-10 flex h-[100svh] w-full items-center justify-center px-0 text-center text-white">
         <div className="relative flex w-full flex-col items-center">
-          <div
-            className="pointer-events-none absolute inset-x-0 -top-10 h-24 bg-gradient-to-b from-black/55 via-black/20 to-transparent blur-2xl"
-            aria-hidden="true"
-          />
           <button
             type="button"
             onClick={openInvitation}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 type Countdown = {
@@ -58,16 +59,17 @@ export function CountdownSection() {
   }, [targetTimeMs]);
 
   return (
-    <section
-      className="relative text-white"
-      style={{
-        backgroundImage: `url("/image/card.png")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="absolute inset-0 bg-emerald-900/70" aria-hidden="true" />
+    <section className="relative w-full overflow-hidden text-white">
+      <div className="absolute inset-0">
+        <Image
+          src="/image/2d.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          className="object-cover object-bottom"
+        />
+      </div>
       <div className="relative mx-auto w-full max-w-5xl px-6 py-14 text-center">
         <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl">
           Cowndown

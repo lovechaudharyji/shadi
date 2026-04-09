@@ -7,7 +7,7 @@ export default function About() {
       <section className="relative flex h-[100svh] items-center justify-center px-6 py-0 sm:min-h-[95vh] sm:py-20">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/image/1.jpeg"
+            src="/image/hero.png"
             alt=""
             aria-hidden="true"
             fill
@@ -15,8 +15,6 @@ export default function About() {
             sizes="100vw"
             className="object-cover object-top"
           />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-zinc-50" />
         </div>
         <div className="pointer-events-none absolute left-1/2 top-4 z-10 flex -translate-x-1/2 flex-col items-center">
           <div className="text-sm font-semibold tracking-wide text-white/90 drop-shadow sm:text-base">
@@ -270,6 +268,16 @@ export default function About() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="relative h-44 w-full sm:h-64">
+        <Image
+          src="/image/last.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          className="object-cover object-bottom"
+        />
       </section>
     </div>
   );
