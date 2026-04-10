@@ -75,7 +75,7 @@ export default function Home() {
       <CountdownSection />
 
       <section className="bg-amber-50">
-        <div className="mx-auto w-full max-w-5xl px-6 py-14 text-center">
+        <div className="mx-auto w-full max-w-5xl px-6 pt-14 pb-0 text-center">
           <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
             Where WE Celebrate
           </div>
@@ -273,26 +273,14 @@ export default function Home() {
       </section>
 
       <section className="relative h-[100svh] w-full overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/image/last.png"
-            alt=""
-            aria-hidden="true"
-            fill
-            sizes="100vw"
-            className="object-cover object-center blur-2xl"
-          />
-        </div>
-        <div className="absolute inset-0">
-          <Image
-            src="/image/last.png"
-            alt=""
-            aria-hidden="true"
-            fill
-            sizes="100vw"
-            className="object-contain object-center"
-          />
-        </div>
+        <Image
+          src="/image/last.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          className="object-cover object-bottom"
+        />
       </section>
 
       {/* Removed starter cards/CTA section */}
