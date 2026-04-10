@@ -109,6 +109,9 @@ export default function About() {
               <div className="mt-3 text-xl font-extrabold tracking-[0.08em] sm:text-2xl">
                 23.04.26 <span className="px-1 text-[#800000]">|</span> 5:00 PM
               </div>
+              <div className="mt-3 text-xs font-extrabold tracking-[0.26em] text-[#800000] sm:text-sm">
+                BHAAT CEREMONY - 5:00 PM
+              </div>
               <div className="mt-2 text-[10px] font-semibold tracking-[0.24em] text-[#3b5d3a] sm:text-[11px]">
                 VENUE- WAZIRABAD, GURGAON
               </div>

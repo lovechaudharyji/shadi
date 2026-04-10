@@ -73,7 +73,7 @@ export function CountdownSection() {
       <div className="relative mx-auto w-full max-w-5xl px-6 pt-6 pb-32 text-center sm:pt-8 sm:pb-36">
         <div className="translate-y-2 sm:translate-y-3">
           <div className="[font-family:var(--font-parisienne)] text-5xl leading-none drop-shadow-[0_2px_2px_rgba(0,0,0,0.15)] sm:text-6xl">
-            Cowndown
+            Countdown
           </div>
           <div className="mt-1 inline-block whitespace-nowrap text-xs font-semibold tracking-[0.12em] text-[#800000] sm:text-base sm:tracking-[0.22em]">
             TO THE MOST SPECIAL DAY OF OUR LIVES
