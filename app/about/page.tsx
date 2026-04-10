@@ -81,9 +81,6 @@ export default function About() {
           <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
             Golden Moments
           </div>
-          <div className="mt-4 text-sm font-semibold tracking-[0.28em] text-[#800000] sm:text-base">
-            LOCATION
-          </div>
 
           <div className="mt-10 grid gap-10 sm:grid-cols-2">
             <div className="text-center text-[#800000]">
@@ -102,6 +99,9 @@ export default function About() {
               </div>
               <div className="mt-3 text-xl font-extrabold tracking-[0.08em] sm:text-2xl">
                 23.04.26 <span className="px-1 text-[#800000]">|</span> 5:00 PM
+              </div>
+              <div className="mt-2 text-[10px] font-semibold tracking-[0.24em] text-[#3b5d3a] sm:text-[11px]">
+                VENUE- WAZIRABAD, GURGAON
               </div>
               <a
                 className="mt-3 inline-flex flex-col items-center justify-center gap-3"
@@ -267,6 +267,27 @@ export default function About() {
                   />
                 </div>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-amber-50">
+        <div className="mx-auto w-full max-w-5xl px-6 py-14 text-center">
+          <div className="[font-family:var(--font-great-vibes)] text-4xl leading-tight text-[#800000] sm:text-5xl">
+            Your presence and blessing mean the world to us
+          </div>
+          <div className="mx-auto mt-10 w-full max-w-sm text-center text-[#3b5d3a]">
+            <div className="text-sm font-semibold tracking-[0.44em]">
+              REGARDS
+            </div>
+            <div className="relative mx-auto mt-3 flex w-full items-center justify-center">
+              <div className="h-px flex-1 bg-[#d4af37]/70" />
+              <span className="mx-3 block h-2 w-2 rotate-45 bg-[#d4af37]" />
+              <div className="h-px flex-1 bg-[#d4af37]/70" />
+            </div>
+            <div className="mt-3 text-xs font-semibold tracking-[0.46em]">
+              YADAV FAMILY
             </div>
           </div>
         </div>

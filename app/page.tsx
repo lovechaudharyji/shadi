@@ -83,9 +83,6 @@ export default function Home() {
           <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
             Golden Moments
           </div>
-          <div className="mt-4 text-sm font-semibold tracking-[0.28em] text-[#800000] sm:text-base">
-            LOCATION
-          </div>
 
           <div className="mt-10 grid gap-10 sm:grid-cols-2">
             <div className="text-center text-[#800000]">
@@ -104,6 +101,9 @@ export default function Home() {
               </div>
               <div className="mt-3 text-xl font-extrabold tracking-[0.08em] sm:text-2xl">
                 23.04.26 <span className="px-1 text-[#800000]">|</span> 5:00 PM
+              </div>
+              <div className="mt-2 text-[10px] font-semibold tracking-[0.24em] text-[#3b5d3a] sm:text-[11px]">
+                VENUE- WAZIRABAD, GURGAON
               </div>
               <a
                 className="mt-3 inline-flex flex-col items-center justify-center gap-3"
