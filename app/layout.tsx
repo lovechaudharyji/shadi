@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Great_Vibes, Parisienne } from "next/font/google";
+import { Geist, Geist_Mono, Great_Vibes, Parisienne, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,6 +24,11 @@ const parisienne = Parisienne({
   weight: "400",
 });
 
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+});
 export const metadata: Metadata = {
   title: "Shadi",
   description: "A simple multi-page Next.js website",
@@ -37,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${parisienne.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${parisienne.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-zinc-50 font-sans text-[#800000]">
         <main className="flex flex-1 flex-col">{children}</main>

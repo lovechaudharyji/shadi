@@ -33,10 +33,10 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="absolute left-1/2 top-[46%] z-10 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2">
-          <div className="flex flex-col items-center gap-5 text-center text-[#800000]">
+        <div className="absolute left-1/2 top-[38%] z-10 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2">
+          <div className="flex flex-col items-center gap-3 text-center text-[#800000]">
             <div className="flex flex-col items-center gap-3">
-              <div className="-mt-2 text-xs font-semibold tracking-[0.32em] text-[#800000] sm:-mt-3 sm:text-sm">
+              <div className="-mt-2 text-xs font-semibold tracking-[0.32em] text-[#d4af37] sm:-mt-3 sm:text-sm">
                 WEDDING INVITATION
               </div>
               <div className="mt-2 flex items-baseline justify-center gap-2 whitespace-nowrap sm:gap-3">
@@ -53,17 +53,17 @@ export default function Home() {
             </div>
 
             <div className="flex w-full max-w-sm flex-col items-center">
-              <div className="mt-4 flex w-full items-center justify-center gap-4">
-                <div className="h-px flex-1 bg-[#800000]/70" />
-                <span className="text-sm leading-none text-[#800000]/80" aria-hidden="true">
+              <div className="mt-1 flex w-full items-center justify-center gap-4">
+                <div className="h-px flex-1 bg-[#d4af37]/80" />
+                <span className="text-sm leading-none text-[#d4af37]" aria-hidden="true">
                   ♥
                 </span>
-                <div className="h-px flex-1 bg-[#800000]/70" />
+                <div className="h-px flex-1 bg-[#d4af37]/80" />
               </div>
-              <div className="mt-3 text-4xl font-semibold tabular-nums tracking-[0.14em] sm:text-5xl">
+              <div className="mt-1 [font-family:var(--font-instrument-serif)] text-4xl font-semibold tabular-nums tracking-[0.14em] sm:text-5xl">
                 25.04.26
               </div>
-              <div className="mt-1 text-[11px] font-semibold tracking-[0.34em] sm:text-xs">
+              <div className="mt-0.5 text-[11px] font-semibold tracking-[0.34em] sm:text-xs">
                 SAVE THE DATE
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
         <div className="pointer-events-none absolute inset-x-0 bottom-8 px-6 text-center sm:bottom-10">
           <div className="text-xs font-semibold tracking-[0.32em] text-[#800000] sm:text-sm">
-            CONFIRM YOUR ATTENDANCE
+            WE&apos;RE GETTING MARRIED
           </div>
         </div>
       </section>
