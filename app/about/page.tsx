@@ -298,7 +298,7 @@ export default function About() {
             <div className="mt-52 [font-family:var(--font-great-vibes)] text-4xl leading-tight text-[#800000] drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)] sm:mt-60 sm:text-5xl">
               Your presence and blessing mean the world to us
             </div>
-            <div className="mx-auto mt-52 w-full max-w-sm text-center text-[#3b5d3a] drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)]">
+            <div className="mx-auto mt-44 w-full max-w-sm text-center text-[#3b5d3a] drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)]">
               <div className="text-sm font-semibold tracking-[0.44em]">
                 REGARDS
               </div>

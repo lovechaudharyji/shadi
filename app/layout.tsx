@@ -30,8 +30,11 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 export const metadata: Metadata = {
-  title: "Shadi",
+  title: "Tarun & Bhawna",
   description: "A simple multi-page Next.js website",
+  icons: {
+    icon: "/image/cowndown.jpeg",
+  },
 };
 
 export default function RootLayout({

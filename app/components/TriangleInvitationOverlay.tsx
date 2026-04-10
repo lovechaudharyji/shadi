@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import type { CSSProperties } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export type TriangleInvitationOverlayProps = {
@@ -12,7 +11,7 @@ export type TriangleInvitationOverlayProps = {
 };
 
 export function TriangleInvitationOverlay({
-  backgroundSrc = "/image/hero.png",
+  backgroundSrc = "/image/bp.png",
   backgroundAlt = "Wedding invitation cover background",
   navigateTo,
 }: TriangleInvitationOverlayProps) {
@@ -29,72 +28,6 @@ export function TriangleInvitationOverlay({
     () => ({ transitionDuration: `${transitionMs}ms` }),
     [transitionMs],
   );
-
-  const flapTransition = useMemo(() => {
-    const base: Pick<
-      CSSProperties,
-      "transitionProperty" | "transitionDuration" | "transitionTimingFunction"
-    > = {
-      transitionProperty: "transform,opacity",
-      transitionDuration: `${transitionMs}ms`,
-      transitionTimingFunction: "cubic-bezier(0.2, 0.85, 0.2, 1)",
-    };
-
-    return {
-      top: { ...base, transitionDelay: "0ms" },
-      left: { ...base, transitionDelay: "40ms" },
-      right: { ...base, transitionDelay: "40ms" },
-      bottom: { ...base, transitionDelay: "80ms" },
-      shade: {
-        transitionProperty: "opacity",
-        transitionDuration: `${transitionMs}ms`,
-        transitionTimingFunction: "cubic-bezier(0.2, 0.85, 0.2, 1)",
-        transitionDelay: "60ms",
-      },
-      button: {
-        transitionProperty: "transform,opacity",
-        transitionDuration: `${Math.max(600, Math.floor(transitionMs * 0.7))}ms`,
-        transitionTimingFunction: "cubic-bezier(0.2, 0.85, 0.2, 1)",
-        transitionDelay: "0ms",
-      },
-    } as const;
-  }, [transitionMs]);
-
-  const flapStyle = useMemo(() => {
-    const base: Pick<
-      CSSProperties,
-      | "clipPath"
-      | "backgroundImage"
-      | "backgroundSize"
-      | "backgroundPosition"
-      | "backgroundRepeat"
-    > = {
-      clipPath: "",
-      backgroundImage: `url("/image/card.png")`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    };
-
-    return {
-      top: {
-        ...base,
-        clipPath: "polygon(0 0, 100% 0, 50% 50%)",
-      },
-      bottom: {
-        ...base,
-        clipPath: "polygon(0 100%, 100% 100%, 50% 50%)",
-      },
-      left: {
-        ...base,
-        clipPath: "polygon(0 0, 0 100%, 50% 50%)",
-      },
-      right: {
-        ...base,
-        clipPath: "polygon(100% 0, 100% 100%, 50% 50%)",
-      },
-    } as const;
-  }, []);
 
   useEffect(() => {
     if (!isMounted || isClosing) {
@@ -165,88 +98,8 @@ export function TriangleInvitationOverlay({
         />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 [isolation:isolate] [perspective:1200px]">
-        <div
-          className={[
-            "absolute inset-0 opacity-100 will-change-transform origin-top transform-gpu",
-            isClosing
-              ? "[transform:translateY(-12%)_rotateX(78deg)] opacity-0"
-              : "[transform:translateY(0)_rotateX(0deg)]",
-          ].join(" ")}
-          style={{ ...flapStyle.top, ...flapTransition.top }}
-          aria-hidden="true"
-        />
-        <div
-          className={[
-            "absolute inset-0 opacity-100 will-change-transform origin-left transform-gpu",
-            isClosing
-              ? "[transform:translateX(-12%)_rotateY(78deg)] opacity-0"
-              : "[transform:translateX(0)_rotateY(0deg)]",
-          ].join(" ")}
-          style={{ ...flapStyle.left, ...flapTransition.left }}
-          aria-hidden="true"
-        />
-        <div
-          className={[
-            "absolute inset-0 opacity-100 will-change-transform origin-right transform-gpu",
-            isClosing
-              ? "[transform:translateX(12%)_rotateY(-78deg)] opacity-0"
-              : "[transform:translateX(0)_rotateY(0deg)]",
-          ].join(" ")}
-          style={{ ...flapStyle.right, ...flapTransition.right }}
-          aria-hidden="true"
-        />
-        <div
-          className={[
-            "absolute inset-0 opacity-100 will-change-transform origin-bottom transform-gpu",
-            isClosing
-              ? "[transform:translateY(12%)_rotateX(-78deg)] opacity-0"
-              : "[transform:translateY(0)_rotateX(0deg)]",
-          ].join(" ")}
-          style={{ ...flapStyle.bottom, ...flapTransition.bottom }}
-          aria-hidden="true"
-        />
-      </div>
-
       <div className="relative z-10 flex h-[100svh] w-full items-center justify-center px-0 text-center text-[#800000]">
-        <div className="relative flex w-full flex-col items-center">
-          <button
-            type="button"
-            onClick={openInvitation}
-            onPointerDown={openInvitation}
-            onTouchStart={openInvitation}
-            className={[
-              "pointer-events-auto relative w-full max-w-none h-48 sm:h-60 md:h-72 overflow-visible",
-              "touch-manipulation",
-              "transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]",
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/60",
-              isClosing ? "opacity-0 scale-[0.96]" : "opacity-100",
-            ].join(" ")}
-            style={flapTransition.button}
-            aria-label="Open invitation"
-          >
-            <Image
-              src="/image/button.png"
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              className="object-contain scale-[1.35] drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)]"
-            />
-          </button>
-          <div
-            className={[
-              "pointer-events-none mt-6 flex items-center justify-center gap-3 text-[#800000] drop-shadow",
-              isClosing ? "opacity-0" : "opacity-100",
-            ].join(" ")}
-            style={flapTransition.button}
-            aria-hidden="true"
-          >
-            <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none sm:text-6xl animate-[tapWave_1.6s_ease-in-out_infinite] will-change-transform">
-              Tap
-            </div>
-          </div>
-        </div>
+        <div className="sr-only">Tap anywhere to open invitation</div>
       </div>
     </div>
   );
