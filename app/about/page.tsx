@@ -79,76 +79,69 @@ export default function About() {
       <section className="bg-amber-50">
         <div className="mx-auto w-full max-w-5xl px-6 pt-14 pb-0 text-center">
           <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
-            Where WE Celebrate
+            Golden Moments
           </div>
           <div className="mt-4 text-sm font-semibold tracking-[0.28em] text-[#800000] sm:text-base">
             LOCATION
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-3xl border border-zinc-200 bg-white p-7 text-center text-[#800000] shadow-sm">
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-[#800000]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="h-5 w-5"
-                  aria-hidden="true"
-                >
-                  <path d="M8 7V3M16 7V3M4 11h16M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z" />
-                </svg>
+          <div className="mt-10 grid gap-10 sm:grid-cols-2">
+            <div className="text-center text-[#800000]">
+              <div className="text-2xl tracking-[0.34em] text-[#3b5d3a] sm:text-3xl">
+                LAGAN SAGAI
               </div>
-              <div className="mt-4 text-3xl tracking-[0.22em] sm:text-2xl">
-                LAGAN CEREMONY
+              <div className="relative mx-auto mt-2 flex w-full max-w-xs items-center justify-center">
+                <div className="h-px flex-1 bg-[#d4af37]/80" />
+                <div className="mx-3 flex items-center gap-2">
+                  <span className="block h-1.5 w-1.5 rotate-45 bg-[#d4af37]" />
+                  <span className="block h-2 w-2 rotate-45 bg-[#d4af37]" />
+                  <span className="block h-1.5 w-1.5 rotate-45 bg-[#d4af37]" />
+                </div>
+                <div className="h-px flex-1 bg-[#d4af37]/80" />
+                <span className="absolute left-1/2 top-full mt-1 block h-2 w-2 -translate-x-1/2 rotate-45 bg-[#d4af37]" />
               </div>
-              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
-                TIMING - 5:00PM
+              <div className="mt-3 text-xl font-extrabold tracking-[0.08em] sm:text-2xl">
+                23.04.26 <span className="px-1 text-[#800000]">|</span> 5:00 PM
               </div>
-
-              <div className="mt-5 space-y-3 text-lg leading-6 text-[#800000]">
-                <div className="inline-flex items-center justify-center gap-2">
+              <a
+                className="mt-3 inline-flex flex-col items-center justify-center gap-3"
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+                  "Rama Palace Sector-61, Haryana Road, Baharampur Naya, Sector 61, Gurugram, Ghata, Haryana - 122098",
+                )}&travelmode=driving`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open directions in Google Maps"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3b5d3a]/15 text-[#3b5d3a]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="h-4 w-4 text-[#800000]"
+                    className="h-5 w-5"
                     aria-hidden="true"
                   >
-                    <path d="M8 7V3M16 7V3M4 11h16M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z" />
+                    <path d="M12 21s7-4.5 7-12a7 7 0 1 0-14 0c0 7.5 7 12 7 12Z" />
+                    <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                   </svg>
-                  <span className="text-2xl leading-none text-[#800000]">23/04/26</span>
                 </div>
-                <div className="mx-auto max-w-md">
-                  <div className="inline-flex items-start justify-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      className="mt-0.5 h-4 w-4 shrink-0 text-[#800000]"
-                      aria-hidden="true"
-                    >
-                      <path d="M12 22s7-4.5 7-12a7 7 0 1 0-14 0c0 7.5 7 12 7 12Z" />
-                      <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
-                    </svg>
-                    <span className="text-base leading-6">
-                      Rama Palace Sector-61, Haryana Road, Baharampur Naya,
-                      Sector 61, Gurugram, Ghata, Haryana - 122098
-                    </span>
-                  </div>
+                <div className="mx-auto max-w-md px-4 text-[11px] font-semibold uppercase tracking-[0.22em] sm:text-xs">
+                  Rama Palace Sector-61, Haryana Road, Baharampur Naya, Sector 61,
+                  Gurugram, Ghata, Haryana - 122098
                 </div>
-                <div>
-                  <a
-                    className="inline-flex items-center justify-center gap-2 text-xl text-[#800000] underline underline-offset-4"
-                    href="https://www.google.com/maps/place/Rama+Palace,+Sector-61,+Haryana+Road,+Baharampur+Naya,+Sector+61,+Gurugram,+Ghata,+Haryana+122098/@28.4169184,77.0968647,15z/data=!4m6!3m5!1s0x390d23a71a97848d:0x1bc269500ec2eb2f!8m2!3d28.4169184!4d77.0968647!16s%2Fg%2F11fhryq9qk?g_ep=Eg1tbF8yMDI2MDMxMV8wIOC7DCoASAJQAg%3D%3D"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+              </a>
+              <a
+                className="mx-auto mt-4 block w-full max-w-md overflow-hidden rounded-3xl border border-[#d4af37]/40 bg-white shadow-sm"
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+                  "Rama Palace Sector-61, Haryana Road, Baharampur Naya, Sector 61, Gurugram, Ghata, Haryana - 122098",
+                )}&travelmode=driving`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open location on map"
+              >
+                <div className="flex items-center justify-center px-4 py-3">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-[#d97706] shadow-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -163,85 +156,88 @@ export default function About() {
                       <path d="M21 14v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
                     </svg>
                     Open location on map
-                  </a>
+                  </div>
                 </div>
-                <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+                <div className="border-t border-zinc-200/60">
                   <iframe
-                    title="Ceremony location map"
-                    className="h-40 w-full sm:h-44"
+                    title="Lagan sagai location map"
+                    className="h-36 w-full pointer-events-none sm:h-40"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps?q=Rama%20Palace%20Sector-61%2C%20Haryana%20Road%2C%20Baharampur%20Naya%2C%20Sector%2061%2C%20Gurugram%2C%20Ghata%2C%20Haryana%20122098&output=embed"
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(
+                      "Rama Palace Sector-61, Haryana Road, Baharampur Naya, Sector 61, Gurugram, Ghata, Haryana - 122098",
+                    )}&output=embed`}
                     allowFullScreen
                   />
                 </div>
-              </div>
+              </a>
             </div>
 
-            <div className="rounded-3xl border border-zinc-200 bg-white p-7 text-center text-[#800000] shadow-sm">
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-[#800000]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="h-5 w-5"
-                  aria-hidden="true"
-                >
-                  <path d="M12 21s7-4.5 7-12a7 7 0 1 0-14 0c0 7.5 7 12 7 12Z" />
-                  <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
-                </svg>
-              </div>
-              <div className="mt-4 text-3xl tracking-[0.22em] sm:text-2xl">
+            <div className="text-center text-[#800000]">
+              <div className="text-2xl tracking-[0.34em] text-[#3b5d3a] sm:text-3xl">
                 WEDDING CEREMONY
               </div>
-              <div className="mt-2 text-xs font-semibold tracking-[0.28em] text-[#800000]">
-                TIMING - 7:30PM
+              <div className="relative mx-auto mt-2 flex w-full max-w-xs items-center justify-center">
+                <div className="h-px flex-1 bg-[#d4af37]/80" />
+                <div className="mx-3 flex items-center gap-2">
+                  <span className="block h-1.5 w-1.5 rotate-45 bg-[#d4af37]" />
+                  <span className="block h-2 w-2 rotate-45 bg-[#d4af37]" />
+                  <span className="block h-1.5 w-1.5 rotate-45 bg-[#d4af37]" />
+                </div>
+                <div className="h-px flex-1 bg-[#d4af37]/80" />
+                <span className="absolute left-1/2 top-full mt-1 block h-2 w-2 -translate-x-1/2 rotate-45 bg-[#d4af37]" />
               </div>
-
-              <div className="mt-5 space-y-3 text-lg leading-6 text-[#800000]">
-                <div className="inline-flex items-center justify-center gap-2">
+              <div className="mt-3 text-xl font-extrabold tracking-[0.08em] sm:text-2xl">
+                25.04.26 <span className="px-1 text-[#800000]">|</span> 7:00 PM
+              </div>
+              <div className="mt-3 text-xs font-extrabold tracking-[0.26em] text-[#800000] sm:text-sm">
+                CHURCHARI - 5:00PM
+              </div>
+              <div className="mt-2 text-[10px] font-semibold tracking-[0.24em] text-[#3b5d3a] sm:text-[11px]">
+                VENUE- WAZIRABAD, GURGAON
+              </div>
+              <div className="mx-auto mt-2 max-w-md px-6 text-[9px] font-semibold tracking-[0.22em] text-[#3b5d3a] sm:text-[10px]">
+                BARAAT WILL DEPART FROM OUR RESIDENCE TO WEDDING VENUE AT 6PM
+              </div>
+              <a
+                className="mt-3 inline-flex flex-col items-center justify-center gap-3"
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+                  "Rama Garden 2, Sector 37 C Rd, Basai Enclave, Sector 37C, Gurugram, Haryana 122006",
+                )}&travelmode=driving`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open directions in Google Maps"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3b5d3a]/15 text-[#3b5d3a]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="h-4 w-4 text-[#800000]"
+                    className="h-5 w-5"
                     aria-hidden="true"
                   >
-                    <path d="M8 7V3M16 7V3M4 11h16M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z" />
+                    <path d="M12 21s7-4.5 7-12a7 7 0 1 0-14 0c0 7.5 7 12 7 12Z" />
+                    <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                   </svg>
-                  <span className="text-2xl leading-none text-[#800000]">25/04/26</span>
                 </div>
-                <div className="mx-auto max-w-md">
-                  <div className="inline-flex items-start justify-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      className="mt-0.5 h-4 w-4 shrink-0 text-[#800000]"
-                      aria-hidden="true"
-                    >
-                      <path d="M12 22s7-4.5 7-12a7 7 0 1 0-14 0c0 7.5 7 12 7 12Z" />
-                      <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
-                    </svg>
-                    <span className="text-base leading-6">
-                      Rama Garden 2, Sector 37 C Rd, Basai Enclave, Sector 37C,
-                      Gurugram, Haryana 122006
-                    </span>
-                  </div>
+                <div className="mx-auto max-w-md px-4 text-[11px] font-semibold uppercase tracking-[0.22em] sm:text-xs">
+                  Rama Garden 2, Sector 37 C Rd, Basai Enclave, Sector 37C,
+                  Gurugram, Haryana 122006
                 </div>
-                <div>
-                  <a
-                    className="inline-flex items-center justify-center gap-2 text-xl text-[#800000] underline underline-offset-4"
-                    href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x390d17a368ba5a3d:0xbb2e3fcee17f3539?entry=s&sa=X&ved=2ahUKEwi788HGo6yTAxXISmwGHU-uChYQ4kB6BAgVEAA&hl=en"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+              </a>
+              <a
+                className="mx-auto mt-4 block w-full max-w-md overflow-hidden rounded-3xl border border-[#d4af37]/40 bg-white shadow-sm"
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+                  "Rama Garden 2, Sector 37 C Rd, Basai Enclave, Sector 37C, Gurugram, Haryana 122006",
+                )}&travelmode=driving`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open location on map"
+              >
+                <div className="flex items-center justify-center px-4 py-3">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-[#d97706] shadow-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -256,19 +252,21 @@ export default function About() {
                       <path d="M21 14v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
                     </svg>
                     Open location on map
-                  </a>
+                  </div>
                 </div>
-                <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+                <div className="border-t border-zinc-200/60">
                   <iframe
                     title="Wedding ceremony location map"
-                    className="h-40 w-full sm:h-44"
+                    className="h-36 w-full pointer-events-none sm:h-40"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps?q=Rama%20Garden%202%2C%20Sector%2037%20C%20Rd%2C%20Basai%20Enclave%2C%20Sector%2037C%2C%20Gurugram%2C%20Haryana%20122006&output=embed"
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(
+                      "Rama Garden 2, Sector 37 C Rd, Basai Enclave, Sector 37C, Gurugram, Haryana 122006",
+                    )}&output=embed`}
                     allowFullScreen
                   />
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
