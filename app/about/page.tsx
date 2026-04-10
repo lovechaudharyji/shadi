@@ -76,8 +76,17 @@ export default function About() {
 
       <CountdownSection />
 
-      <section className="bg-amber-50">
-        <div className="mx-auto w-full max-w-5xl px-6 pt-14 pb-0 text-center">
+      <section className="relative overflow-hidden bg-amber-50">
+        <Image
+          src="/image/bg.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-amber-50/25" aria-hidden="true" />
+        <div className="relative mx-auto w-full max-w-5xl px-6 pt-14 pb-0 text-center">
           <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
             Golden Moments
           </div>
@@ -272,27 +281,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-amber-50">
-        <div className="mx-auto w-full max-w-5xl px-6 py-14 text-center">
-          <div className="[font-family:var(--font-great-vibes)] text-4xl leading-tight text-[#800000] sm:text-5xl">
-            Your presence and blessing mean the world to us
-          </div>
-          <div className="mx-auto mt-10 w-full max-w-sm text-center text-[#3b5d3a]">
-            <div className="text-sm font-semibold tracking-[0.44em]">
-              REGARDS
-            </div>
-            <div className="relative mx-auto mt-3 flex w-full items-center justify-center">
-              <div className="h-px flex-1 bg-[#d4af37]/70" />
-              <span className="mx-3 block h-2 w-2 rotate-45 bg-[#d4af37]" />
-              <div className="h-px flex-1 bg-[#d4af37]/70" />
-            </div>
-            <div className="mt-3 text-xs font-semibold tracking-[0.46em]">
-              YADAV FAMILY
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="relative h-[100svh] w-full overflow-hidden">
         <Image
           src="/image/last.png"
@@ -302,6 +290,26 @@ export default function About() {
           sizes="100vw"
           className="object-cover object-bottom"
         />
+        <div className="absolute inset-0 flex items-center justify-center px-6 pt-48 text-center sm:pt-64">
+          <div className="w-full max-w-xl">
+            <div className="mt-52 [font-family:var(--font-great-vibes)] text-4xl leading-tight text-[#800000] drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)] sm:mt-60 sm:text-5xl">
+              Your presence and blessing mean the world to us
+            </div>
+            <div className="mx-auto mt-52 w-full max-w-sm text-center text-[#3b5d3a] drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)]">
+              <div className="text-sm font-semibold tracking-[0.44em]">
+                REGARDS
+              </div>
+              <div className="relative mx-auto mt-3 flex w-full items-center justify-center">
+                <div className="h-px flex-1 bg-[#d4af37]/70" />
+                <span className="mx-3 block h-2 w-2 rotate-45 bg-[#d4af37]" />
+                <div className="h-px flex-1 bg-[#d4af37]/70" />
+              </div>
+              <div className="mt-3 text-xs font-semibold tracking-[0.46em]">
+                YADAV FAMILY
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

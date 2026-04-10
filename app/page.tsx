@@ -78,8 +78,17 @@ export default function Home() {
 
       <CountdownSection />
 
-      <section className="bg-amber-50">
-        <div className="mx-auto w-full max-w-5xl px-6 pt-14 pb-0 text-center">
+      <section className="relative overflow-hidden bg-amber-50">
+        <Image
+          src="/image/bg.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-amber-50/25" aria-hidden="true" />
+        <div className="relative mx-auto w-full max-w-5xl px-6 pt-14 pb-0 text-center">
           <div className="[font-family:var(--font-great-vibes)] text-5xl leading-none text-[#800000] sm:text-6xl">
             Golden Moments
           </div>
@@ -283,6 +292,13 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-bottom"
         />
+        <div className="absolute inset-0 flex items-center justify-center px-6 pt-48 text-center sm:pt-64">
+          <div className="w-full max-w-xl">
+            <div className="mt-52 [font-family:var(--font-great-vibes)] text-4xl leading-tight text-[#800000] drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)] sm:mt-60 sm:text-5xl">
+              Your presence and blessing mean the world to us
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Removed starter cards/CTA section */}
