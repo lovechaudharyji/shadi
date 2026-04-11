@@ -114,9 +114,6 @@ export default function Home() {
               <div className="mt-3 text-xs font-extrabold tracking-[0.26em] text-[#800000] sm:text-sm">
                 BHAAT CEREMONY - 5:00 PM
               </div>
-              <div className="mt-2 text-[10px] font-semibold tracking-[0.24em] text-[#3b5d3a] sm:text-[11px]">
-                VENUE- WAZIRABAD, GURGAON
-              </div>
               <a
                 className="mt-3 inline-flex flex-col items-center justify-center gap-3"
                 href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
@@ -205,10 +202,7 @@ export default function Home() {
                 25.04.26 <span className="px-1 text-[#800000]">|</span> 7:00 PM
               </div>
               <div className="mt-3 text-xs font-extrabold tracking-[0.26em] text-[#800000] sm:text-sm">
-                CHURCHARI - 5:00PM
-              </div>
-              <div className="mt-2 text-[10px] font-semibold tracking-[0.24em] text-[#3b5d3a] sm:text-[11px]">
-                VENUE- WAZIRABAD, GURGAON
+                GHURCHARI - 5:00PM
               </div>
               <div className="mx-auto mt-2 max-w-md px-6 text-[9px] font-semibold tracking-[0.22em] text-[#3b5d3a] sm:text-[10px]">
                 BARAAT WILL DEPART FROM OUR RESIDENCE TO WEDDING VENUE AT 6PM
